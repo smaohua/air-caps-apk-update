@@ -29,7 +29,7 @@ class TestAirCapsReworkTool(unittest.TestCase):
         """Clean up after tests"""
         try:
             self.root.destroy()
-        except:
+        except Exception:
             pass
     
     def test_application_initialization(self):
