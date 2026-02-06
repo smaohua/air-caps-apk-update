@@ -1,0 +1,10 @@
+# Air-Caps Smart Glasses Rework Tool - Requirements
+# Python 3.7+
+
+# No additional Python packages required for basic functionality
+# tkinter is included with Python standard library
+
+# Optional packages for enhanced functionality:
+# pyzbar>=0.1.9  # For QR code scanning from webcam (optional)
+# pillow>=9.0.0  # For image processing with QR codes (optional)
+# opencv-python>=4.5.0  # For webcam QR code scanning (optional)
