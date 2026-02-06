@@ -1,0 +1,48 @@
+{
+    "application": {
+        "title": "Air-Caps Smart Glasses Rework Tool",
+        "version": "1.0.0",
+        "window_width": 800,
+        "window_height": 600
+    },
+    "apk": {
+        "default_path": "app.apk",
+        "install_flags": ["-r"]
+    },
+    "device": {
+        "check_interval_ms": 3000,
+        "operation_timeout_seconds": 30
+    },
+    "tests": [
+        {
+            "name": "Device Model",
+            "command": ["adb", "shell", "getprop", "ro.product.model"]
+        },
+        {
+            "name": "Battery Status",
+            "command": ["adb", "shell", "dumpsys", "battery"]
+        },
+        {
+            "name": "Storage Check",
+            "command": ["adb", "shell", "df", "/data"]
+        },
+        {
+            "name": "Package List",
+            "command": ["adb", "shell", "pm", "list", "packages"]
+        }
+    ],
+    "verification": [
+        {
+            "name": "Device State",
+            "command": ["adb", "get-state"]
+        },
+        {
+            "name": "Android Version",
+            "command": ["adb", "shell", "getprop", "ro.build.version.release"]
+        },
+        {
+            "name": "Device Serial",
+            "command": ["adb", "get-serialno"]
+        }
+    ]
+}
